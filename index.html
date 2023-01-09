@@ -25,9 +25,9 @@
         >
         <nav>
           <ul class="nav-list">
-            <li class="nav-item active"><a href="./index.html">Студія</a></li>
+            <li class="nav-item"><a href="./index.html">Студія</a></li>
             <li class="nav-item">
-              <a href="./portfolio.html">Портфоліо</a>
+              <a class="nav-link active" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="nav-item"><a href="./contacts.html">Контакти</a></li>
           </ul>
@@ -124,26 +124,35 @@
         <div class="container">
           <h2>Чим ми займаємося</h2>
           <ul class="work-list">
-            <li>
+            <li class="work-item">
               <img
                 src="./images/web.jpg"
                 alt="Створення вебсайтів"
                 width="370"
               />
+              <div class="work-overlay">
+                <p class="work-overlay-text">десктопні додатки</p>
+              </div>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./images/mobile.jpg"
                 alt="Створення мобільних застосунків"
                 width="370"
               />
+              <div class="work-overlay">
+                <p class="work-overlay-text">мобільні додатки</p>
+              </div>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./images/graphics.jpg"
                 alt="Графічний дизайн"
                 width="370"
               />
+              <div class="work-overlay">
+                <p class="work-overlay-text">дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -402,9 +411,11 @@
         <div class="container">
           <h2 class="clients-header">Постійні клієнти</h2>
           <div class="logo-wrapper">
-            <svg class="clients-logo" width="106" height="60">
-              <use href="./images/icons.svg#Logo1"></use>
-            </svg>
+            <a class="clients-link">
+              <svg class="clients-logo" width="106" height="60">
+                <use href="./images/icons.svg#Logo1"></use>
+              </svg>
+            </a>
             <svg class="clients-logo">
               <use href="./images/icons.svg#Logo2"></use>
             </svg>

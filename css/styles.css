@@ -53,9 +53,25 @@ body {
   color: inherit;
 }
 
+.nav-link.active {
+  position: relative;
+}
+
 .nav-item a:hover,
 .nav-item a:focus,
-.nav-item.active a {
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
   color: var(--accent-color);
 }
 
@@ -187,7 +203,7 @@ body {
 }
 
 .features-list li {
-  flex-basis: calc((100%-90px) / 4);
+  flex-basis: calc((100% - 90px) / 4);
 }
 
 .features-list p {
@@ -219,6 +235,30 @@ body {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+
+.work-overlay-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 27px 0;
+
+  color: var(--secondary-color);
+}
+
+.work-item {
+  position: relative;
+}
+
+.work-overlay {
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
 }
 
 /* Team section */
@@ -354,7 +394,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 14;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
   padding-bottom: 20px;
@@ -425,8 +465,11 @@ body {
 
 .card-item {
   width: 370px;
-  /* margin: 15px; */
-  /* height: 404px; */
+}
+
+.card-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 .card-item img {
@@ -435,6 +478,30 @@ body {
 .card-item:hover,
 .card-item:focus {
   box-shadow: var(--card-item-shadow);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+}
+
+.card-overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+
+  color: var(--secondary-color);
+}
+
+.card-item:hover .card-overlay,
+.card-item:focus .card-overlay {
+  transform: translateY(0);
 }
 
 .card-title {
@@ -520,4 +587,11 @@ body {
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+
+.clients-logo:hover,
+.clients-logo:focus {
+  fill: var(--accent-color);
+  cursor: pointer;
+  border-color: var(--accent-color);
 }
