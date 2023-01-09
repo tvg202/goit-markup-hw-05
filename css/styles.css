@@ -57,8 +57,8 @@ body {
   position: relative;
 }
 
-.nav-item a:hover,
-.nav-item a:focus,
+.nav-link:hover,
+.nav-link:focus,
 .nav-link.active {
   color: var(--accent-color);
 }
